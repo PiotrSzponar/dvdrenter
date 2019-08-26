@@ -17,5 +17,5 @@ app.use('/dvds', dvdsRouter);
 app.use((req, res, next) => res.status(404).send('not found!'));
 
 db.initDbConnection(() =>
-  db.seedDb(() => app.listen(port, () => console.log(`Hello, ${port}`)))
+  app.listen(port, () => console.log(`Hello, ${port}`))
 );
