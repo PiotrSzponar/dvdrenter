@@ -1,6 +1,6 @@
 const dbConfig = {
-    url: "<your connection url>",
-    options: {}
-}
+  url: process.env.dbconnection,
+  options: { useNewUrlParser: true },
+};
 
 module.exports = dbConfig;
