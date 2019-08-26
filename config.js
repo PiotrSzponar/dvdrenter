@@ -1,4 +1,4 @@
 module.exports = {
-  port: process.env.PORT,
+  PORT: process.env.PORT,
   dbconnection: process.env.dbconnection,
 };
