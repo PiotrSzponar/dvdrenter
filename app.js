@@ -10,6 +10,9 @@ const { port } = require('./config');
 const app = express();
 
 app.use(bodyParser.json());
+
+app.get('/', (req, res) => res.send('hello world'));
+
 app.use('/users', userRouter);
 app.use(authMiddleware);
 app.use('/dvds', dvdsRouter);
