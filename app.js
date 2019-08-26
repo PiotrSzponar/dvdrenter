@@ -5,7 +5,7 @@ const db = require('./database/mongo');
 const userRouter = require('./routes/users');
 const dvdsRouter = require('./routes/dvds');
 const { authMiddleware } = require('./middlewares/auth');
-const { port } = require('./config');
+const { PORT } = require('./config');
 
 const app = express();
 
@@ -20,5 +20,5 @@ app.use('/dvds', dvdsRouter);
 app.use((req, res, next) => res.status(404).send('not found!'));
 
 db.initDbConnection(() =>
-  app.listen(port, () => console.log(`Hello, ${port}`))
+  app.listen(PORT, () => console.log(`Hello, ${PORT}`))
 );
